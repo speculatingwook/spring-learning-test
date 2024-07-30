@@ -13,7 +13,7 @@
 ## 진행 가이드
 - 클론 받기 `git clone https://github.com/next-step/spring-learning-test.git`
 - 체크아웃 브랜치 `git checkout simple`
-- [1. HelloApplication 실행하기](https://github.com/next-step/spring-learning-test/tree/simple#1-helloapplication-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0) 부터 가이드를 참고하여 진행
+- [1. HelloApplication 실행하기](https://github.com/speculatingwook/spring-learning-test/tree/simple#1-helloapplication-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0) 부터 가이드를 참고하여 진행
 - 완성 브랜치 [simple-sample](https://github.com/next-step/spring-learning-test/tree/simple-sample)를 참고해서 진행해도 좋음 `git checkout simple-sample`
 
 ---
