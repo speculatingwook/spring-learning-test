@@ -51,14 +51,14 @@ public class UriPatternTest {
                 .when().get("/uri-pattern/patterns/a")
                 .then().log().all()
                 .statusCode(HttpStatus.OK.value())
-                .body(is("pattern"));
+                .body(is("a"));
 
         RestAssured.given().log().all()
                 .accept(MediaType.APPLICATION_JSON_VALUE)
                 .when().get("/uri-pattern/patterns/b")
                 .then().log().all()
                 .statusCode(HttpStatus.OK.value())
-                .body(is("pattern"));
+                .body(is("b"));
     }
 
     /**
