@@ -13,20 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExceptionsController {
 
     @GetMapping("/hello")
-    public ResponseEntity exceptionHandler() {
+    public void exceptionHandler() {
         throw new CustomException();
     }
 
     @GetMapping("/hi")
-    public ResponseEntity exceptionHandler2() {
+    public void exceptionHandler2() {
         throw new HelloException();
     }
 
-    @ExceptionHandler({CustomException.class, HelloException.class})
-    public ResponseEntity<String> handle(Exception e) {
-        if(e.getClass().equals(CustomException.class)) {
-            return ResponseEntity.badRequest().body("CustomException");
-        }
-        return ResponseEntity.badRequest().body("HelloException");
+    @ExceptionHandler(CustomException.class)
+    public ResponseEntity<String> handleCustomException(CustomException e) {
+        return ResponseEntity.badRequest().body("CustomException");
     }
 }

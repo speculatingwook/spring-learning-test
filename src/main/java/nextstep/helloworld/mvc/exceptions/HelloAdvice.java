@@ -5,8 +5,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+@ControllerAdvice
 public class HelloAdvice {
-    public ResponseEntity<String> handle() {
+    @ExceptionHandler(HelloException.class)
+    public ResponseEntity<String> handle(HelloException e) {
         return ResponseEntity.badRequest().body("HelloException");
     }
 }
