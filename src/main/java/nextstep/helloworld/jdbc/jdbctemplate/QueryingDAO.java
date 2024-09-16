@@ -29,7 +29,7 @@ public class QueryingDAO {
      */
     public int count() {
         String sql = "select count(*) from customers";
-        return 0;
+        return jdbcTemplate.queryForObject(sql, Integer.class);
     }
 
     /**
